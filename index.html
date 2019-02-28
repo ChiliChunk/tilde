@@ -57,6 +57,14 @@
       },
       {
         category: 'Lurk',
+        name: 'Facebook',
+        key: 'f',
+        url: 'https://www.facebook.com',
+        search: '/search?q={}',
+        color: 'linear-gradient(135deg, #5f99cf, #5f7dcf)',
+      },
+      {
+        category: 'Lurk',
         name: 'Unsplash',
         key: 'u',
         url: 'https://unsplash.com/new',
@@ -351,7 +359,14 @@
     font-weight: var(--font-weight-normal);
     text-align: center;
     letter-spacing: 0.05rem;
-    cursor: pointer;
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
   }
 
   .am-pm {
@@ -642,7 +657,7 @@
       this._delimiter = options.delimiter;
       this._twentyFourHourClock = options.twentyFourHourClock;
       this._setTime = this._setTime.bind(this);
-      this._el.addEventListener('click', options.showForm);
+      // this._el.addEventListener('click', options.showForm);
       this._start();
     }
 
